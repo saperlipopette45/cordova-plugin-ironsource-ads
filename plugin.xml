@@ -208,10 +208,21 @@
                 <param name="ios-package" value="IronSourceAdsPlugin" />
             </feature>
         </config-file>
+        <!-- SDK -->
+        <!-- https://developers.ironsrc.com/ironsource-mobile/ios/ios-sdk/ -->
+        <config-file target="*-Info.plist" parent="SKAdNetworkItems">
+            <array>
+                <dict>
+                    <key>SKAdNetworkIdentifier</key>
+                    <string>su67r6k2v3.skadnetwork</string>
+                </dict>
+            </array>
+        </config-file>
+        
         <header-file src="src/ios/IronSourceAdsPlugin.h" />
         <source-file src="src/ios/IronSourceAdsPlugin.m" />
         
-        <framework src="IronSourceSDK" type="podspec" spec="~> 6.8.1.0" />
+        <framework src="IronSourceSDK" type="podspec" spec="~> 7.1.5.0" />
         
         <!-- ADD MEDIATION FRAMEWORKS HERE -->
         <framework src="IronSourceFacebookAdapter" type="podspec" spec="~> 4.3.3.0" />
